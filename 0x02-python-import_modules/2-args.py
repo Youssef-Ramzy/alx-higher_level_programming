@@ -7,7 +7,7 @@ def main():
     if n <= 1:
         print("0 arguments.")
     else:
-        print("{} argument: ".format(n-1))
+        print("{} argument:".format(n-1))
         for i in range(1, n):
             print("{}: {}".format(i, sys.argv[i]))
 
