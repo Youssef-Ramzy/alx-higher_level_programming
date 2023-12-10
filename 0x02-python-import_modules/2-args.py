@@ -7,7 +7,7 @@ def main():
     if n <= 1:
         print("0 arguments.")
     else:
-        if n == 1:
+        if n == 2:
             print("{} argument:".format(n-1))
         else:
             print("{} arguments:".format(n-1))
