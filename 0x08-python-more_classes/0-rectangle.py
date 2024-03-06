@@ -2,8 +2,8 @@
 """
 0-rectangle.Rectangle
 """
+
+
 class Rectangle:
+    """class Rectangle"""
     pass
-"""
-class Rectangle
-"""
