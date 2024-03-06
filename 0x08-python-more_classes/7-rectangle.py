@@ -62,7 +62,7 @@ class Rectangle:
         else:
             for _ in range(self.height):
                 for _ in range(self.__width):
-                    emt += "#"
+                    emt += str(self.print_symbol)
                 emt += "\n"
             return emt.rstrip()
 
