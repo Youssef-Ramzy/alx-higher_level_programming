@@ -1,19 +1,25 @@
 #!/usr/bin/python3
-""" Write a class Rectangle that inherits from BaseGeometry. """
-Rectangle = __import__('9-rectangle.py').Rectangle
+"""
+This module for class Rectangle
+"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-class Square(Rectangle):
-    """ a class for the task """
-    def __init__(self, size):
-        """ instantiation with size """
-        self.integer_validator("size", size)
-        self.__size = size
+class Rectangle(BaseGeometry):
+    """
+    Rectangle class
+    """
+    def __init__(self, width, height):
+        """init func"""
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self.__width = width
+        self.__height = height
 
     def area(self):
-        """ returns the area of the square """
-        return (self.__size * self.__size)
+        """rectangle area"""
+        return self.__width*self.__height
 
     def __str__(self):
-        """ returns the string representation of the square """
-        return ("[Square] {}/{}".format(self.__size, self.__size))
+        """str func"""
+        return f"[Rectangle] {self.__width}/{self.__height}"
