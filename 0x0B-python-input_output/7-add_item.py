@@ -1,17 +1,19 @@
 #!/usr/bin/python3
 """Add item"""
 import sys
-import os.path
-import json
+load_from_json_file = \
+        __import__("6-load_from_json_file").load_from_json_file
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 
 
-def add_item(filename="add_item.json", *args):
-    """Add item"""
-    if os.path.exists(filename):
-        with open(filename, "r") as file:
-            obj = json.load(file)
-    else:
-        obj = []
-    obj.extend(args)
-    with open(filename, "w") as file:
-        json.dump(obj, file)
+args = sys.argv[1:]
+filename = "add_item.json"
+
+try:
+    items = load_from_json_file(filename)
+except FileNotFoundError:
+    items = []
+
+items.extend(args)
+save_to_json_file(items, filename)
+print("Items added successfully!")
