@@ -1,10 +1,16 @@
 #!/usr/bin/python3
+
 class Base:
     """Base class for all other classes in the project"""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initializes the base class"""
+        """Initializes the base class
+
+        Args:
+            id (int, optional): The id of the object. Defaults to None.
+        """
         if id is not None:
             self.id = id
         else:
