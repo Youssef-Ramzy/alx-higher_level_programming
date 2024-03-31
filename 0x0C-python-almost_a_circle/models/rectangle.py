@@ -48,3 +48,31 @@ class Rectangle(Base):
             value (int): The value to set the height attribute to
         """
         self.__height = value
+
+    @property
+    def x(self):
+        """Getter for the x attribute"""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """Setter for the x attribute
+
+        Args:
+            value (int): The value to set the x attribute to
+        """
+        self.__x = value
+
+    @property
+    def y(self):
+        """Getter for the y attribute"""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Setter for the y attribute
+
+        Args:
+            value (int): The value to set the y attribute to
+        """
+        self.__y = value
