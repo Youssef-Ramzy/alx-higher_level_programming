@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/python3\
+"""Base module for the project"""
+
 
 class Base:
     """Base class for all other classes in the project"""
