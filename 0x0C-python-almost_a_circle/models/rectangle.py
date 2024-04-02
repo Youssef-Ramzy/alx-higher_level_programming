@@ -67,6 +67,14 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
 
+    def to_dictionary(self):
+        """get dictionary copy of the class"""
+        class_dict = {}
+        keys = ("id", "size", "x", "y")
+        for key in keys:
+            class_dict[key] = getattr(self, key)
+        return class_dict
+
     @property
     def width(self):
         """
