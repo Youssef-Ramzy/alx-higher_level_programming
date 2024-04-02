@@ -68,12 +68,9 @@ class Rectangle(Base):
                 .format(self.id, self.x, self.y, self.width, self.height))
 
     def to_dictionary(self):
-        """get dictionary copy of the class"""
-        class_dict = {}
-        keys = ("id", "size", "x", "y")
-        for key in keys:
-            class_dict[key] = getattr(self, key)
-        return class_dict
+        '''Returns dictionary representation of this class.'''
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
 
     @property
     def width(self):
