@@ -44,7 +44,8 @@ class Rectangle(Base):
         """Prints a rectangle using '#' characters"""
         for i in range(self.height):
             for x in range(self.width):
-                print("#")
+                print("#", end="")
+            print()
 
     @property
     def width(self):
