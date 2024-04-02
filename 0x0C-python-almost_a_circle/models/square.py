@@ -31,16 +31,23 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """Getter method"""
+        """Getter method for the size attribute."""
         return self.width
 
     @size.setter
     def size(self, value):
-        """Setter method"""
+        """Setter method for the size attribute."""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """Update the attributes of the square.
+
+        Args:
+            *args: Variable length argument list.
+            **kwargs: Arbitrary keyword arguments.
+
+        """
         if args:
             attributes = ['id', 'size', 'x', 'y']
             for attribute, value in zip(attributes, args):
