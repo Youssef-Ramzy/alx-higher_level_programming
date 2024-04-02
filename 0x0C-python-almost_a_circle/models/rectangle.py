@@ -32,6 +32,15 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def update(self, *args):
+        """
+        Updates the attributes of the Rectangle instance."""
+        self.id = args[1]
+        self.width = args[2]
+        self.height = args[3]
+        self.x = args[4]
+        self.y = args[5]
+
     def area(self):
         """Calculate the area of the rectangle.
 
