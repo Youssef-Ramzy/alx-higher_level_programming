@@ -2,6 +2,7 @@
 """ This is the rectangle module for this project """
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     Represents a rectangle.
@@ -21,9 +22,9 @@ class Rectangle(Base):
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-            x (int, optional): The x-coordinate of the rectangle's position. Defaults to 0.
-            y (int, optional): The y-coordinate of the rectangle's position. Defaults to 0.
-            id (int, optional): The unique identifier of the rectangle. Defaults to None.
+            x (int, optional): The x-coordinate of the rectangle's.
+            y (int, optional): The y-coordinate of the rectangle's.
+            id (int, optional): The unique identifier of the rectangle.
         """
         super().__init__(id)
         self.width = width
