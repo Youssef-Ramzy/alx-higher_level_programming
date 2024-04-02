@@ -41,9 +41,8 @@ class Rectangle(Base):
             for attribute, value in zip(attributes, args):
                 setattr(self, attribute, value)
         else:
-            if kwargs is not None:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def area(self):
         """Calculate the area of the rectangle.
