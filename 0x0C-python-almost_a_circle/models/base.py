@@ -1,17 +1,21 @@
-#!/usr/bin/python3\
-"""Base module for the project"""
+#!/usr/bin/python3
+""" This is a models base.py for this project """
 
 
 class Base:
-    """Base class for all other classes in the project"""
+    """This is the base class for all objects in the project.
+
+    Attributes:
+        __nb_objects (int): The number of objects created.
+    """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initializes the base class
+        """Initialize a new instance of the Base class.
 
         Args:
-            id (int, optional): The id of the object. Defaults to None.
+            id (int): The ID of the object (default is None).
         """
         if id is not None:
             self.id = id
