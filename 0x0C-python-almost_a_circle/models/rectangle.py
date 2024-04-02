@@ -36,7 +36,7 @@ class Rectangle(Base):
         """
         Updates the attributes of the Rectangle instance.
         """
-        if args is not None:
+        if args:
             attributes = ['id', 'width', 'height', 'x', 'y']
             for attribute, value in zip(attributes, args):
                 setattr(self, attribute, value)
