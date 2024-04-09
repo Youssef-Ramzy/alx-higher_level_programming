@@ -7,11 +7,7 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c) {
-        this.print(c)
-    } else {
-        this.print();
-    }
+    this.print(c);
   }
 }
 
