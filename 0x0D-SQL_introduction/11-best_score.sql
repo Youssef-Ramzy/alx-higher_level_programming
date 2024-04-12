@@ -1,2 +1,2 @@
 -- 11-best_score.sql
-SELECT * FROM second_table WHERE score >= 10;
+SELECT 'score' , 'naem' FROM 'second_table' WHERE 'score' >= 10 ORDER BY 'score' DESC;
