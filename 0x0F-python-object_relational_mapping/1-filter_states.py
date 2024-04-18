@@ -14,7 +14,7 @@ def main():
         db=sys.argv[3]
     )
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE name = N% ORDER BY id;")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id;")
     result = cur.fetchall()
     for row in result:
         print(row)
