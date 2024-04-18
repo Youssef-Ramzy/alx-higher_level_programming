@@ -15,13 +15,13 @@ def main():
     )
     cur = con.cursor()
     name_of_state = sys.argv[4]
-    quary = """SELECT c.name
+    query = """SELECT c.name
                 FROM cities AS c
                 JOIN states AS s ON c.state_id = s.id
                 WHERE s.name = %s
                 ORDER BY c.id ASC;
                 """
-    cur.execute(quary, (name_of_state,))
+    cur.execute(query, (name_of_state,))
     result = cur.fetchall()
     cities = []
     for row in result:
