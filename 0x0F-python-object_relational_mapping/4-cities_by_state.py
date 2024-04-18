@@ -14,7 +14,12 @@ def main():
         db=sys.argv[3]
     )
     cur = con.cursor()
-    cur.execute("SELECT id, name, (SELECT name FROM states) FROM cities ORDER BY id ASC;")
+    quary = """SELECT c.id, c.name, s.name
+                FROM cities AS c, states AS s
+                WHERE c.state_id = s.id
+                ORDER BY c.id ASC;
+                """
+    cur.execute(quary)
     result = cur.fetchall()
     for row in result:
         print(row)
