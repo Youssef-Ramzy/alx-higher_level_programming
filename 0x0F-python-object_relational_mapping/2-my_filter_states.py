@@ -15,8 +15,8 @@ def main():
     )
     cur = con.cursor()
     name = sys.argv[4]
-    compire = "SELECT * FROM states WHERE name LIKE %s;"
-    cur.executemany(compire, name)
+    query = "SELECT * FROM states WHERE name LIKE %s;"
+    cur.execute(query, (name,))
     result = cur.fetchall()
     for row in result:
         print(row)
