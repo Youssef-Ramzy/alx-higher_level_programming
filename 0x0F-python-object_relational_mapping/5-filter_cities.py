@@ -16,15 +16,15 @@ def main():
     cur = con.cursor()
     name_of_state = sys.argv[4]
     quary = """SELECT c.name
-                FROM cities AS c, states AS s
-                WHERE c.state_id = s.id
+                FROM cities AS c
+                JOIN states AS s ON c.state_id = s.id
+                WHERE s.name = %s
                 ORDER BY c.id ASC;
                 """
     cur.execute(quary, (name_of_state,))
     result = cur.fetchall()
     for row in result:
-        if (row+1 != None):
-            print(row, end=", ")
+        print(row[0], end=", ")
     con.commit()
     cur.close()
 
