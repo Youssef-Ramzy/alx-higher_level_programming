@@ -14,7 +14,7 @@ def main():
         db=sys.argv[3]
     )
     cur = con.cursor()
-    cur.execute("SELECT * FROM cities ORDER BY id ASC;")
+    cur.execute("SELECT id, name, (SELECT name FROM states) FROM cities ORDER BY id ASC;")
     result = cur.fetchall()
     for row in result:
         print(row)
