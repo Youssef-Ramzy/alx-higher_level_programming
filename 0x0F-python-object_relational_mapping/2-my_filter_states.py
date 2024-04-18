@@ -23,5 +23,6 @@ def main():
     con.commit()
     cur.close()
 
+
 if __name__ == "__main__":
     main()
