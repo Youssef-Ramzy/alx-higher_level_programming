@@ -17,7 +17,7 @@ def main():
     name_of_state = sys.argv[4]
     query = """SELECT c.name
                 FROM cities AS c
-                JOIN states AS s ON c.state_id = s.id
+                INNER JOIN states AS s ON c.state_id = s.id
                 WHERE s.name = %s
                 ORDER BY c.id ASC;
                 """
