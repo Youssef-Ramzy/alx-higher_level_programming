@@ -23,8 +23,10 @@ def main():
                 """
     cur.execute(quary, (name_of_state,))
     result = cur.fetchall()
+    cities = []
     for row in result:
-        print(row[0], end=", ")
+        cities.append(row[0])
+    print(", ".join(cities))
     con.commit()
     cur.close()
 
