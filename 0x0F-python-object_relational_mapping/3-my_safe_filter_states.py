@@ -15,7 +15,7 @@ def main():
     )
     cur = con.cursor()
     name = sys.argv[4]
-    query = "SELECT * FROM states WHERE name LIKE %s;"
+    query = "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC;"
     cur.execute(query, (name,))
     result = cur.fetchall()
     for row in result:
